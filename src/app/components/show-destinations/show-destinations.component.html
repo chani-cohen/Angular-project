@@ -1,0 +1,16 @@
+
+<!-- Displays the destinations(יעדים) list-->
+<ul>
+<!-- When you click on the desired destination, the button will turn red -->
+    <button *ngFor="let des of this.destinations" #bu (click)="bu.style.backgroundColor = 'red';currentDestination = des;" >
+        {{des}}
+    </button><br>
+
+    <!-- Fields to fill in to order tickets -->
+    <input type="text" [(ngModel)]="consumerName"  placeholder="consumer name"><br>
+    <input type="number" [(ngModel)]="numTikets"  placeholder="num tikets"><br>
+    <input type="text" [(ngModel)]="consumerId"  placeholder="consumer id"><br>
+    
+
+<button (click)="addNewOrder()" >add</button>
+</ul>
